@@ -9,7 +9,9 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
 using System.Diagnostics;
 
-using Microsoft.Xna.Framework.Input.Touch;          //Touch library
+//using Microsoft.Xna.Framework.Input.Touch;          //Touch library
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 //using Android.Media;
 
 #endregion
@@ -62,8 +64,7 @@ namespace SpellSlingerWindowsPort
         //MediaPlayer inGameMusic;
         //MediaPlayer confirmSound;
 
-        //List<MediaPlayer> spellSounds;
-
+        List<SoundEffect> spellSounds; //sound effect
         string name;
 
         public Game1()
@@ -156,11 +157,7 @@ namespace SpellSlingerWindowsPort
 
         public void PlaySpellSound(SPELL_TYPE type_)
         {
-            //if (spellSounds[(int)type_].IsPlaying)
-            //{
-            //    SpellSoundCompletion(spellSounds[(int)type_], new EventArgs());
-            //}
-            //spellSounds[(int)type_].Start();
+            spellSounds[(int)type_].Play(0.3f, 0.0f, 0.0f);
         }
 
         void MyDrawString(Vector2 pos_, string text_, float scale_ = 1.5f)
@@ -191,7 +188,7 @@ namespace SpellSlingerWindowsPort
 
             currentGameState = -1;
 
-            TouchPanel.EnabledGestures = GestureType.Tap | GestureType.FreeDrag | GestureType.DragComplete | GestureType.DoubleTap;   //Enable gestures here
+            //TouchPanel.EnabledGestures = GestureType.Tap | GestureType.FreeDrag | GestureType.DragComplete | GestureType.DoubleTap;   //Enable gestures here
 
             base.Initialize();
         }
@@ -248,6 +245,18 @@ namespace SpellSlingerWindowsPort
             scoreSearchPos = new Vector2(150, 600);
 
             gameAssets.leaderboardBG = Content.Load<Texture2D>("leaderboard_bg.png");
+
+            //sounds
+            //menuMusic = Content.Load<SoundEffect>("one_in_2.mp3");
+            //menuMusic = Content.Load<Song>("one_in_2.mp3");
+
+            spellSounds = new List<SoundEffect>();
+            spellSounds.Add(Content.Load<SoundEffect>("FIREBALL2.wav"));
+            spellSounds.Add(Content.Load<SoundEffect>("ICELANCE4.wav"));
+            spellSounds.Add(Content.Load<SoundEffect>("THUNDER3.wav"));
+            spellSounds.Add(Content.Load<SoundEffect>("DESPAIR2.wav"));
+            spellSounds.Add(Content.Load<SoundEffect>("RAPTURE4.wav"));
+
         }
 
         //gameState MUST BE a PlayGame object for SaveToFile() to work.
@@ -306,6 +315,7 @@ namespace SpellSlingerWindowsPort
                     case (int)GAME_STATES.MENU:
                         gameState = new Menu(gameAssets, viewPort, objectFactory, colliderHandler);
                         ((Menu)gameState).Name = name;
+                        //MediaPlayer.Play(menuMusic);
                         break;
                     case (int)GAME_STATES.SAVE_TO_FILE:
                         SaveToFile();                        
