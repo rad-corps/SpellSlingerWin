@@ -5,7 +5,7 @@ using System.Text;
 using System.Timers;
 using Microsoft.Xna.Framework;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class EnemySpawner
     {

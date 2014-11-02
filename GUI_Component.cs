@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class GUI_Component : Entity
     {

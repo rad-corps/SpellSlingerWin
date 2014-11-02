@@ -6,7 +6,7 @@ using System.Timers;
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
 
 

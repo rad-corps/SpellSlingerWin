@@ -14,7 +14,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class LeaderboardSerializer //: Activity
     {

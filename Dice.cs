@@ -5,7 +5,7 @@ using System.Text;
 
 //Models N number of dice with S number of sides
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class Dice
     {

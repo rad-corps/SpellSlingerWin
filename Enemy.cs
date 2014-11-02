@@ -6,7 +6,7 @@ using System.Timers;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     //enum ENEMY_STATUS
     //{

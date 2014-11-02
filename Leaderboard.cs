@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
 
     class Leaderboard : BASE_GAMESTATE
@@ -26,6 +26,12 @@ namespace MonogameAndroidProject
         SpriteFont spriteFont;
         LeaderboardSerializer serializer;
         MouseState lastMouseState;
+        KbHandler kb;
+
+        bool showSearchInput;
+        public bool ShowSearchInput { get { return showSearchInput; } }
+        string searchScore;
+        public string SearchScore { get { return searchScore; } } 
 
         public List<LeaderboardRecord> Records { get { return serializer.Records; } }
 
@@ -50,38 +56,40 @@ namespace MonogameAndroidProject
             searchResultStr = "";
 
             lastMouseState = Mouse.GetState();
+
+            kb = new KbHandler();
         }
 
         //this is called after the user enters a record to search for
-        void OnEndShowKeyboardInput(IAsyncResult result)
+        void OnEndShowKeyboardInput()
         {
             //string str = Guide.EndShowKeyboardInput(result);
-            //if (str != null)
-            //{
-            //    str = str.Trim();
-            //    int num;
-            //    bool isNum = int.TryParse(str, out num);
-            //    if (isNum)
-            //    {
-                    
-            //        LeaderboardRecord tempRecord = new LeaderboardRecord("", num);
-            //        List<LeaderboardRecord> records = serializer.Records;
-            //        int recordIndex = records.BinarySearch(tempRecord);
-            //        if (recordIndex >= 0)
-            //        {
-            //            LeaderboardRecord searchResult = records[recordIndex];
-            //            searchResultStr = "Record Found: " + searchResult.name + " - " + searchResult.score;
-            //        }
-            //        else
-            //        {
-            //            searchResultStr = "Record Not Found";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        searchResultStr = "Not a number";
-            //    }
-            //}
+            if (searchScore != null)
+            {
+                
+                int num;
+                bool isNum = int.TryParse(searchScore, out num);
+                searchScore = "";
+                if (isNum)
+                {
+                    LeaderboardRecord tempRecord = new LeaderboardRecord("", num);
+                    List<LeaderboardRecord> records = serializer.Records;
+                    int recordIndex = records.BinarySearch(tempRecord);
+                    if (recordIndex >= 0)
+                    {
+                        LeaderboardRecord searchResult = records[recordIndex];
+                        searchResultStr = "Record Found: " + searchResult.name + " - " + searchResult.score;
+                    }
+                    else
+                    {
+                        searchResultStr = "Record Not Found";
+                    }
+                }
+                else
+                {
+                    searchResultStr = "Not a number";
+                }
+            }
                 
         }
 
@@ -102,9 +110,21 @@ namespace MonogameAndroidProject
                     }
                     if (collider.Collider(gameAssets.MenuListItem(i), gesturePos) && gameAssets.MenuListItem(i).Identifier == 990)
                     {
-                        Guide.BeginShowKeyboardInput(PlayerIndex.One, "Enter Score to binary search for", "", "10000", new AsyncCallback(OnEndShowKeyboardInput), null);                            
+                        showSearchInput = true;
                         return;
                     }
+                }
+            }
+
+            if (showSearchInput)
+            {                
+                kb.Update();
+                searchScore = kb.Str;
+                if (kb.Submit)
+                {
+                    OnEndShowKeyboardInput();
+                    showSearchInput = false;
+                    kb = new KbHandler();
                 }
             }
             lastMouseState = Mouse.GetState();

@@ -10,7 +10,7 @@ using System.Timers;
 
 using Microsoft.Xna.Framework.Input.Touch;          //Touch library
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class PlayGame : BASE_GAMESTATE
     {

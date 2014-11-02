@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class End : BASE_GAMESTATE
     {

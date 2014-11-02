@@ -51,6 +51,7 @@
     <Compile Include="GUI.cs" />
     <Compile Include="GUI_Component.cs" />
     <Compile Include="Intro.cs" />
+    <Compile Include="KBHandler.cs" />
     <Compile Include="Leaderboard.cs" />
     <Compile Include="LeaderboardRecord.cs" />
     <Compile Include="LeaderboardSerializer.cs" />

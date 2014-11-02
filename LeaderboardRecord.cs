@@ -12,7 +12,7 @@ using System.Text;
 
 
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     [Serializable]
     class LeaderboardRecord : IComparable<LeaderboardRecord>

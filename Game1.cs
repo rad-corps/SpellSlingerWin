@@ -14,7 +14,7 @@ using Microsoft.Xna.Framework.Input.Touch;          //Touch library
 
 #endregion
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     /// <summary>
     /// This is the main type for your game
@@ -44,6 +44,7 @@ namespace MonogameAndroidProject
         //Text to screen
         SpriteFont myFont;
         Vector2 fontPos;
+        Vector2 scoreSearchPos;
 
         //Text to screen
         SpriteFont waveStateFont;
@@ -242,8 +243,9 @@ namespace MonogameAndroidProject
             //JEREMY!! where is "myFont" defined??? - "Content" -> myFont.xnb
             waveStateFont = Content.Load<SpriteFont>("myFont");            
             //waveStateFontPos = new Vector2(20, 100);
-            waveCapacityFontPos = new Vector2(100, 40);
+            waveCapacityFontPos = new Vector2(20, 20);
             nameFontPos = new Vector2(630, 130);
+            scoreSearchPos = new Vector2(150, 600);
 
             gameAssets.leaderboardBG = Content.Load<Texture2D>("leaderboard_bg.png");
         }
@@ -303,6 +305,7 @@ namespace MonogameAndroidProject
                         break;
                     case (int)GAME_STATES.MENU:
                         gameState = new Menu(gameAssets, viewPort, objectFactory, colliderHandler);
+                        ((Menu)gameState).Name = name;
                         break;
                     case (int)GAME_STATES.SAVE_TO_FILE:
                         SaveToFile();                        
@@ -413,8 +416,8 @@ namespace MonogameAndroidProject
                 {
                     Vector2 gameStateTextPos = new Vector2(waveCapacityFontPos.X, waveCapacityFontPos.Y + FONT_MARGIN * 2);
                     if (((PlayGame)gameState).CurrentPlayState == PLAY_STATES.WAVE_IN_PROGRESS)
-                    {
-                        string waveString = "WAVE    " + ((PlayGame)gameState).WaveNum.ToString();
+                    {                        
+                        string waveString = "WAVE     " + ((PlayGame)gameState).WaveNum.ToString();
                         MyDrawString(gameStateTextPos, waveString);
                     }
                     if (((PlayGame)gameState).CurrentPlayState == PLAY_STATES.WAITING_FOR_WAVE_TO_START)
@@ -422,9 +425,9 @@ namespace MonogameAndroidProject
                         MyDrawString(gameStateTextPos, "GET READY");
                     }
                     if (((PlayGame)gameState).CurrentPlayState == PLAY_STATES.WAVE_COMPLETE)
-                    {
-                        string waveString = "WAVE     " + (((PlayGame)gameState).WaveNum - 1).ToString() + " COMPLETE";
-                        MyDrawString(gameStateTextPos, waveString);
+                    {                        
+                        string waveString = "WAVE " + (((PlayGame)gameState).WaveNum - 1).ToString() + " COMPLETE";
+                        MyDrawString(new Vector2(420, viewPort.ViewPortHeight / 2 + 100), waveString, 3.0f);
                     }
                     if (((PlayGame)gameState).CurrentPlayState == PLAY_STATES.OVERWHELMED)
                     {
@@ -482,7 +485,7 @@ namespace MonogameAndroidProject
                 if ( lb.SearchResultStr != "" ) 
                 {
                     Vector2 resultPos = new Vector2(leaderboardFont.X, viewPort.ViewPortHeight - 100);
-                    MyDrawString(resultPos, lb.SearchResultStr, 2.0f);
+                    MyDrawString(resultPos, lb.SearchResultStr, 1.0f);
                 }
                 
                 //draw gui for leaderboards
@@ -492,6 +495,11 @@ namespace MonogameAndroidProject
                     {
                         viewPort.Draw(gameAssets.MenuListItem(i));
                     }
+                }
+                if (lb.ShowSearchInput)
+                {
+                    Vector2 resultPos = new Vector2(leaderboardFont.X, viewPort.ViewPortHeight - 120);
+                    MyDrawString(resultPos, "Type score and press enter: " + lb.SearchScore, 1.0f);
                 }
             }
             spriteBatch.End();

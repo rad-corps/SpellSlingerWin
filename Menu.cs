@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class Menu : BASE_GAMESTATE
     {
@@ -39,9 +39,12 @@ namespace MonogameAndroidProject
             
         }
 
+        
+
         public string Name
         {
             get { return name; }
+            set { name = value; }
         }
 
         void OnEndShowKeyboardInput(IAsyncResult result)

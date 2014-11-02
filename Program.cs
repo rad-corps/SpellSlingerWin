@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 #endregion
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
 #if WINDOWS || LINUX
     /// <summary>

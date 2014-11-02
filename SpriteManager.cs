@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     public enum PLAYER_SPRITES
     {
@@ -24,7 +24,7 @@ namespace MonogameAndroidProject
         ARROW_DOWN,
         ARROW_LEFT,
         ARROW_RIGHT,
-        GUI_TOWER,
+        //GUI_TOWER,
         QUIT_BUTTON,
         SEARCH_BUTTON,
         MAIN_MENU_BG,
@@ -84,7 +84,7 @@ namespace MonogameAndroidProject
             GUISpriteFileNames[(int)GUI_SPRITES.ARROW_DOWN] = "arrowDown.png";
             GUISpriteFileNames[(int)GUI_SPRITES.ARROW_LEFT] = "arrowLeft.png";
             GUISpriteFileNames[(int)GUI_SPRITES.ARROW_RIGHT] = "arrowRight.png";
-            GUISpriteFileNames[(int)GUI_SPRITES.GUI_TOWER] = "GUItower.png";
+            //GUISpriteFileNames[(int)GUI_SPRITES.GUI_TOWER] = "GUItower.png";
             GUISpriteFileNames[(int)GUI_SPRITES.QUIT_BUTTON] = "quit.png";
             GUISpriteFileNames[(int)GUI_SPRITES.SEARCH_BUTTON] = "search.png";
 

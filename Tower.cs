@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Timers;
 using Microsoft.Xna.Framework;
 
-namespace MonogameAndroidProject
+namespace SpellSlingerWindowsPort
 {
     class Tower : Entity
     {
@@ -28,8 +28,8 @@ namespace MonogameAndroidProject
 
             this.Width = 128;
             this.Height = 128;
-            X = MonogameAndroidProject.Game1.SCREEN_WIDTH / 2;// -Width / 2;
-            Y = MonogameAndroidProject.Game1.SCREEN_HEIGHT / 2;// -Width / 2;
+            X = SpellSlingerWindowsPort.Game1.SCREEN_WIDTH / 2;// -Width / 2;
+            Y = SpellSlingerWindowsPort.Game1.SCREEN_HEIGHT / 2;// -Width / 2;
 
             Active = true;
             capacity = 0;
