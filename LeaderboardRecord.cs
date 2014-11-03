@@ -41,6 +41,11 @@ namespace SpellSlingerWindowsPort
             else return Equals(lr);
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public bool Equals(LeaderboardRecord other)
         {
             if (other == null) return false;
