@@ -27,16 +27,19 @@ namespace SpellSlingerWindowsPort
         //private ENEMY_STATUS status;
         //private Timer recoveryTimer;
         private int cost;
+        int wave;
 
 
-        public Enemy(ENEMY_TYPE enemyType_, Vector2 playerPos_, Vector2 pos_)
+        public Enemy(ENEMY_TYPE enemyType_, Vector2 playerPos_, Vector2 pos_, int wave_)
         {
             pos = pos_;
             //status = ENEMY_STATUS.OK;
             enemyType = enemyType_;
+            wave = wave_;
             InitialiseEnemyVariables();
             playerPos = playerPos_;
             Active = true;
+            
         }
 
         //direction property (we dont need to store as we can calculate on the fly)
@@ -59,7 +62,7 @@ namespace SpellSlingerWindowsPort
             {
                 case ENEMY_TYPE.GHOUL:
                     health = 12;
-                    speed = 0.016f;
+                    speed = 0.02f;
                     weakness = SPELL_TYPE.FIREBALL;
                     cost = 15;
                     essence = cost;
@@ -87,7 +90,7 @@ namespace SpellSlingerWindowsPort
                     break;
                 case ENEMY_TYPE.SKELETON_KNIGHT:
                     health = 30;
-                    speed = 0.03f;
+                    speed = 0.035f;
                     weakness = SPELL_TYPE.RAPTURE;
                     resistance = SPELL_TYPE.DESPAIR;
                     cost = 40;
@@ -97,7 +100,7 @@ namespace SpellSlingerWindowsPort
                     break;
                 case ENEMY_TYPE.OGRE:
                     health = 30;
-                    speed = 0.035f;
+                    speed = 0.04f;
                     weakness = SPELL_TYPE.ICELANCE;
                     resistance = SPELL_TYPE.FIREBALL;
                     cost = 80;
@@ -107,7 +110,7 @@ namespace SpellSlingerWindowsPort
                     break;
                 case ENEMY_TYPE.WEREWOLF:
                     health = 36;
-                    speed = 0.04f;
+                    speed = 0.045f;
                     weakness = SPELL_TYPE.ICELANCE;
                     resistance = SPELL_TYPE.FIREBALL;
                     cost = 160;
@@ -117,7 +120,7 @@ namespace SpellSlingerWindowsPort
                     break;
                 case ENEMY_TYPE.GREEN_DRAGON:
                     health = 50;
-                    speed = 0.05f;
+                    speed = 0.055f;
                     weakness = SPELL_TYPE.RAPTURE;
                     resistance = SPELL_TYPE.DESPAIR;
                     cost = 320;
@@ -126,6 +129,7 @@ namespace SpellSlingerWindowsPort
                     this.Height = 32;   
                     break;
             }
+            speed = speed * (1 + (wave * 0.1f));
         }
 
         //returns amount of essense received if hit results in a kill

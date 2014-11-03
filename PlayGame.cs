@@ -17,7 +17,7 @@ namespace SpellSlingerWindowsPort
         public delegate void PlaySpellAudio(SPELL_TYPE st_);
         public PlaySpellAudio playSpellAudioCallback;
 
-        const int TIME_BETWEEN_SPAWNERS_BASE = 5000;
+        const int TIME_BETWEEN_SPAWNERS_BASE = 2500;
         const float TIME_BETWEEN_SPAWNERS_MULTIPLIER = 0.9f;
         //const int TIME_BETWEEN_SPAWNERS_MULTI = 100;
         const int POINTS_TO_SPEND_BASE = 600;
@@ -163,7 +163,7 @@ namespace SpellSlingerWindowsPort
                 Debug.WriteLine("numOfSpawners: " + numOfSpawners);
                 Debug.WriteLine("timeBetweenSpawners: " + timeBetweenSpawners);
 
-                currentWave = objectFactory_.GenerateWave(pointsToSpendPerSpawner, numOfSpawners, timeBetweenSpawners, viewPort_);
+                currentWave = objectFactory_.GenerateWave(pointsToSpendPerSpawner, numOfSpawners, timeBetweenSpawners, viewPort_, waveNum);
 
                 //we need this state so we dont accidentally think the level is over before it has started (enemies may not spawn immediately)
                 playState = PLAY_STATES.WAITING_FOR_WAVE_TO_START;

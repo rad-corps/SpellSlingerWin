@@ -34,11 +34,14 @@ namespace SpellSlingerWindowsPort
         //The Circle used to determine spawn location
         Circle spawnCircle;
 
+        int wave;
+
         //constructor takes a factory (because we have already created this in Game and dont want to create a second one)
-        public EnemySpawner(Factory factory_, EnemySpawnRules esr_, uint timerIntervalMs_, uint startTimerms_, Circle spawnCircle_, int pointsToSpend_)
+        public EnemySpawner(Factory factory_, EnemySpawnRules esr_, uint timerIntervalMs_, uint startTimerms_, Circle spawnCircle_, int pointsToSpend_, int wave_)
         {
             pointsToSpend = pointsToSpend_;
-            
+
+            wave = wave_;
             //numEnemiesSpawned = 0;
             //numEnemiesToSpawn = numEnemiesToSpawn_;
 
@@ -96,7 +99,7 @@ namespace SpellSlingerWindowsPort
             {
                 ENEMY_TYPE enemy_type = esr.RandomiseEnemy();
 
-                Enemy enemy = factoryOrder.CreateEnemy(enemy_type, spawnCircle.GetPointNearLastRandomAngle());
+                Enemy enemy = factoryOrder.CreateEnemy(enemy_type, spawnCircle.GetPointNearLastRandomAngle(), wave);
 
                 //if (enemy.Cost > pointsToSpend)
                 //do not spawn enemy and tell the owner that the EnemySpawner has stopped

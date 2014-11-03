@@ -88,7 +88,7 @@ namespace SpellSlingerWindowsPort
         //    }            
         //}
 
-        public List<EnemySpawner> GenerateWave(int pointsToSpendPerSpawner_, int numOfSpawners_, int timeBetweenSpawners_, ViewPort vp_)
+        public List<EnemySpawner> GenerateWave(int pointsToSpendPerSpawner_, int numOfSpawners_, int timeBetweenSpawners_, ViewPort vp_, int waveNum_)
         {
             List<EnemySpawner> wave = new List<EnemySpawner>();
             uint spawnNumber = 0;
@@ -103,7 +103,7 @@ namespace SpellSlingerWindowsPort
 
                 Circle circle = new Circle(new Vector2(gameAssets.TowerListItem(0).X, gameAssets.TowerListItem(0).Y), (vp_.ResRect.Width / 2) + 200);
                 uint startTimerMS = (uint)(spawnNumber * timeBetweenSpawners_) + 1;
-                EnemySpawner enemySpawner = new EnemySpawner(this, rules, TIMER_INTERVAL, startTimerMS, circle, pointsToSpendPerSpawner_);
+                EnemySpawner enemySpawner = new EnemySpawner(this, rules, TIMER_INTERVAL, startTimerMS, circle, pointsToSpendPerSpawner_, waveNum_);
                 wave.Add(enemySpawner);
                 ++spawnNumber;
             }
@@ -115,10 +115,10 @@ namespace SpellSlingerWindowsPort
         #endregion
 
         //By the time we get to CreateEnemy the EnemySpawner, Dice and EnemySpawnRules have done their job i.e. decided what enemy to spawn. 
-        public Enemy CreateEnemy(ENEMY_TYPE enemyType_, Vector2 enemyPos_, int wave_ = 1)
+        public Enemy CreateEnemy(ENEMY_TYPE enemyType_, Vector2 enemyPos_, int wave_)
         {
             //TODO: 0 hardcoded in next line for now, will be safe unless multiple towers introduced
-            Enemy enemy = new Enemy(enemyType_, gameAssets.TowerListItem(0).Pos, enemyPos_);
+            Enemy enemy = new Enemy(enemyType_, gameAssets.TowerListItem(0).Pos, enemyPos_, wave_);
 
             enemy.Texture = gameAssets.EnemyTextureList[(int)enemyType_];
             gameAssets.EnemyListAdd(enemy);
