@@ -250,6 +250,35 @@ namespace SpellSlingerWindowsPort
 
         void InputManagement(float delta_)
         {
+
+            //Select spells 1-5.
+            if (Keyboard.GetState().IsKeyDown(Keys.D1))
+            {
+                spellSelect = SPELL_TYPE.FIREBALL;
+                SetActiveSpell(SPELL_TYPE.FIREBALL);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D2))
+            {
+                spellSelect = SPELL_TYPE.ICELANCE;
+                SetActiveSpell(SPELL_TYPE.ICELANCE);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D3))
+            {
+                spellSelect = SPELL_TYPE.LIGHTNING;
+                SetActiveSpell(SPELL_TYPE.LIGHTNING);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D4))
+            {
+                spellSelect = SPELL_TYPE.DESPAIR;
+                SetActiveSpell(SPELL_TYPE.DESPAIR);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D5))
+            {
+                spellSelect = SPELL_TYPE.RAPTURE;
+                SetActiveSpell(SPELL_TYPE.RAPTURE);
+            }
+            
+
             currentMouseState = Mouse.GetState();
 
             //set all existing on screen spells Initialhit=false

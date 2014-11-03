@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpellSlingerWindowsPort.BASE_GAMESTATE" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BASE_GAMESTATE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Circle" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAQCAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.ColliderHandler" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>ColliderHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Dice" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAAAAAACAAAAAgAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.End" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>End.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Enemy" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA0ACAAAAAAAAABAACIAQDAAAAAwAQAAAAgAAAAIAAg=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.EnemySpawner" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAACAAEAAIAIAAAAAQAABAAAAKAAkEAAAQQAA=</HashCode>
+      <FileName>EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.EnemySpawnRules" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>EnemySpawnRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Entity" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAABAAAAIYAQAKQAMACAECIBgBoCAKAaAgAYAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Factory" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAMAAAAAABAAAAAAAIAAAEAgAAwAAAIAAAAAAAA=</HashCode>
+      <FileName>Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Game1" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwYQIEAgAgQAAwAgCAQAAYAlQYAEEAwAFABgACAAAJQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.GameAssets" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAAAQgQAAAAhIgAAgAAAVgCBAAIAAAQBQCGEskQA=</HashCode>
+      <FileName>GameAssets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.GUI" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAIAAAAAAQAAAAAAAAAAAAABAAAgAAABCA=</HashCode>
+      <FileName>GUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.GUI_Component" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI_Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Intro" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAgAAAAAAAAAAEAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Intro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.KbHandler" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAACAAAAAAAAAAAAAIAIAACAAAAAAAQAAAAE=</HashCode>
+      <FileName>KBHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Leaderboard" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQABEBAIAAAAAIABCQABIQAAAEEAAABAAAAEAgAAAA=</HashCode>
+      <FileName>Leaderboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.LeaderboardRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAgAAIAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LeaderboardRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.LeaderboardSerializer" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAIAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>LeaderboardSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Menu" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEBAAAAAAAAABAAAAIQAAAAEAAAAAAAAEAgAAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.PlayGame" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECQIEIRQAEAAEQgJAICCRACAAoAAAACABAgAxAIwBAA=</HashCode>
+      <FileName>PlayGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Program" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Spell" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAFAKAgAYQgAAAUAAAAAQAAIAFBCAAAQAAAAAAAAA=</HashCode>
+      <FileName>Spell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.SpriteManager" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAEAAAAACEAQQAAAAQAAQQIAACAABAAAAAAI=</HashCode>
+      <FileName>SpriteManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.Tower" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUACBAAAAAAAAgAAAIIAAQCAAAMAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Tower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpellSlingerWindowsPort.ViewPort" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAEEEAgAEEA4ACBAQAwAAAAAAAAAAQAACIEQAAaUA=</HashCode>
+      <FileName>ViewPort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SpellSlingerWindowsPort.GAME_STATES" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAIABAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BASE_GAMESTATE.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpellSlingerWindowsPort.PLAY_STATES" Collapsed="true">
+    <Position X="17.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAABAAAAAAAAAAAAAAAAAAACAQAAAAAQA=</HashCode>
+      <FileName>BASE_GAMESTATE.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpellSlingerWindowsPort.ENEMY_TYPE" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAEAAAAYAAAQIAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>EnemyType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpellSlingerWindowsPort.SPELL_TYPE" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAgAAAAAAAAQEAAAAUAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpellType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpellSlingerWindowsPort.PLAYER_SPRITES" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpriteManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpellSlingerWindowsPort.GUI_SPRITES" Collapsed="true">
+    <Position X="15.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAEAAAgQAEAAAAAAEAQAAiIAAAEEEBAAAAABCAAQIA=</HashCode>
+      <FileName>SpriteManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
