@@ -59,7 +59,7 @@
   <Class Name="SpellSlingerWindowsPort.Entity" Collapsed="true">
     <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAABAAAAIYAQAKQAMACAECIBgBoCAKAaAgAYAA=</HashCode>
+      <HashCode>AgAAAAAABAAAAIYAQAKQAMACAACIBgBoCAKAaAgAYAA=</HashCode>
       <FileName>Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +73,7 @@
   <Class Name="SpellSlingerWindowsPort.Game1" Collapsed="true">
     <Position X="15.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwYQIEAgAgQAAwAgCAQAAYAlQYAEEAwAFABgACAAAJQ=</HashCode>
+      <HashCode>AwQQIEAgAgQAAwAgCAQAAYAlQYAEEAwAFABgACAAAJQ=</HashCode>
       <FileName>Game1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -115,14 +115,14 @@
   <Class Name="SpellSlingerWindowsPort.Leaderboard" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAQABEBAIAAAAAIABCQABIQAAAEEAAABAAAAEAgAAAA=</HashCode>
+      <HashCode>IAQABEBAIAAAAAIABAQABIQAAAEEAAABAAAAEAgAAAA=</HashCode>
       <FileName>Leaderboard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpellSlingerWindowsPort.LeaderboardRecord" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="15.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAgAAIAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAgAAIAAAAAAAEAIAAAAAAAAAAAAA=</HashCode>
       <FileName>LeaderboardRecord.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -144,7 +144,7 @@
   <Class Name="SpellSlingerWindowsPort.PlayGame" Collapsed="true">
     <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ECQIEIRQAEAAEQgJAICCRACAAoAAAACABAgAxAIwBAA=</HashCode>
+      <HashCode>ECQIEIRQAEAAEQgBAICCRACAAoAAAACABAgAxAIwBAA=</HashCode>
       <FileName>PlayGame.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -179,7 +179,7 @@
   <Class Name="SpellSlingerWindowsPort.ViewPort" Collapsed="true">
     <Position X="15.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACQAEEEAgAEEA4ACBAQAwAAAAAAAAAAQAACIEQAAaUA=</HashCode>
+      <HashCode>ACQAEEAAgAEEAwACBAQAwAAAAAAAAAAQAACIEQAAaAA=</HashCode>
       <FileName>ViewPort.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -25,7 +25,7 @@ namespace SpellSlingerWindowsPort
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        SpriteFont font;
+        //SpriteFont font;
 
         GameAssets gameAssets;
         ViewPort viewPort;

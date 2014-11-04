@@ -43,8 +43,6 @@ namespace SpellSlingerWindowsPort
             int width = 96;
             int height = 96;
             int pad = 10;           //padding between spell buttons
-            int xpad;
-            int ypad;
             int distFromX = (height >> 1) + (height >> 2);
 
             objectFactory.CreateGUIComponent(GUI_SPRITES.HOTBAR_1, (0 * pad) + (0 * (viewPort.ViewPortWidth / 5)) + distFromX, viewPort.ViewPortHeight - distFromX, width, height, true, true, 1);

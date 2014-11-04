@@ -22,8 +22,8 @@ namespace SpellSlingerWindowsPort
         Factory objectFactory;
         ColliderHandler collider;
         GUI gui;
-        SpriteBatch spriteBatch;
-        SpriteFont spriteFont;
+        //SpriteBatch spriteBatch;
+        //SpriteFont spriteFont;
         LeaderboardSerializer serializer;
         MouseState lastMouseState;
         KbHandler kb;

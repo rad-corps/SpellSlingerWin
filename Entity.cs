@@ -19,7 +19,7 @@ namespace SpellSlingerWindowsPort
         private int identifier;                         //Use for MOR object control (Required for GUI & spell select)
         protected Color drawColour = Color.White;
         protected float scale = 1.0f;
-        protected Rectangle sourceRect;                     //Used for UV's
+        //protected Rectangle sourceRect;                     //Used for UV's
 
 
         //Will allow for iteration through lists and if false object will be removed - ie dead enemies, spells cast

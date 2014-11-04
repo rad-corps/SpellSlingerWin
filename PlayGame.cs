@@ -46,7 +46,7 @@ namespace SpellSlingerWindowsPort
         //MOUSE VARS FOR WINDOWZ
         MouseState currentMouseState;
         MouseState prevMouseState;
-        bool dragging;
+        //bool dragging;
         Vector2 mousePosOnClick;
         Vector2 mousePosOnRelease;
 
@@ -83,7 +83,7 @@ namespace SpellSlingerWindowsPort
             currentTimeBetweenSpawners = TIME_BETWEEN_SPAWNERS_BASE;
 
             //mouseDownTime = 0.0f;
-            dragging = false;
+            //dragging = false;
         }
 
         //triggered from the waveCompleteTimer.Elapsed
@@ -297,7 +297,7 @@ namespace SpellSlingerWindowsPort
 
             if (currentMouseState.LeftButton == ButtonState.Released && prevMouseState.LeftButton == ButtonState.Pressed)
             {
-                dragging = false;
+                //dragging = false;
                 mousePosOnRelease = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
                 if ((mousePosOnClick - mousePosOnRelease).Length() < 10)
                     clicked = true;
@@ -430,7 +430,7 @@ namespace SpellSlingerWindowsPort
                 
                 if (prevMousePos != currentMousePos)
                 {
-                    dragging = true;
+                    //dragging = true;
                 }
                 viewPort_.Movement(movement.X, movement.Y);
             }

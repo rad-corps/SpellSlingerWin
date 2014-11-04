@@ -37,10 +37,10 @@ namespace SpellSlingerWindowsPort
         Rectangle resRect;
 
         //PC: is the user currently holding W,A,S or D down?
-        bool viewLeftSnappedState;
-        bool viewRightSnappedState;
-        bool viewUpSnappedState;
-        bool viewDownSnappedState;
+        //bool viewLeftSnappedState;
+        //bool viewRightSnappedState;
+        //bool viewUpSnappedState;
+        //bool viewDownSnappedState;
 
         bool movementHeld;
 
@@ -56,10 +56,10 @@ namespace SpellSlingerWindowsPort
             aimAreaX = 0;
             aimAreaY = 0;
 
-            viewLeftSnappedState = false;
-            viewRightSnappedState = false;
-            viewUpSnappedState = false;
-            viewDownSnappedState = false;
+            //viewLeftSnappedState = false;
+            //viewRightSnappedState = false;
+            //viewUpSnappedState = false;
+            //viewDownSnappedState = false;
 
             snapPosition = new Vector2(0.0f, 0.0f);
             drawPos = new Rectangle(0, 0, 0, 0);
